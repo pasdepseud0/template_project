@@ -2,28 +2,28 @@
 ## EPITECH PROJECT, 2022
 ## Makefile
 ## File description:
-## Compile
+## compile maze and solver
 ##
 
-SRC		=	src/main.c
+OBJ = $(SRC:.c=.o)
 
-NAME	=	template
+NAME3 = $(NAME) && $(NAME2)
 
-CFLAGS 	=	-g -Wall -Wextra -I includes
+CFLAGS = -Wall -Wextra -I includes/
 
-OBJ		=	$(SRC:.c=.o)
+all: $(NAME3)
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	gcc -o $(NAME) $(OBJ)
-
+$(NAME3): $(OBJ)
+	make -C template/
 
 clean:
-	rm -f *~
-	rm -f $(OBJ)
+		make clean -C template/
 
-fclean:	clean
-	rm -f $(NAME)
+fclean: clean
+		make fclean -C template/
 
-re:	fclean all
+debug: CFLAGS += -g
+
+debug: re
+
+re: fclean all
