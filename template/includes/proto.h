@@ -31,3 +31,4 @@ int my_getnbr(char *str);
 int negative_compt(char const *str, int *negative);
 int my_compute_power_rec(long nb, int p);
 void my_printf(char *s , ...);
+int lineup(char **env);

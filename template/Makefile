@@ -5,9 +5,9 @@
 ## Compile generator
 ##
 
-SRC		=	src/main.c
+SRC		=	src/main.c	\
 
-NAME    =	binary
+NAME    =	my_pipe
 
 OBJ		=	$(SRC:.c=.o)
 
@@ -17,7 +17,7 @@ all: $(NAME) clean
 
 $(NAME): $(OBJ)
 	make -C lib/my
-	gcc $(OBJ) -o $(NAME)
+	gcc $(OBJ) -o $(NAME) -L lib/my -lmy
 
 clean:
 	make clean -C lib/my/

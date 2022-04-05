@@ -18,15 +18,4 @@ typedef struct solv_st {
     int y;
 } solv_t;
 
-char **my_str_to_word_array(char *str, char *sep);
-char *solv_map(solv_t *solv, char *file);
-int play_game(solv_t *solv);
-int free_game(solv_t *solv);
-int move_player(solv_t *solv, int key);
-void player_mvleft(solv_t *solv);
-void player_mvright(solv_t *solv);
-void player_mvup(solv_t *solv);
-void player_mvdown(solv_t *solv);
-void get_player_pos(solv_t *solv);
-
 #endif
