@@ -5,9 +5,11 @@
 ** all
 */
 
-#pragma once
+#ifndef ALL_H_
+    #define ALL_H_
 
-#include "my.h"
-#include "proto.h"
-#include "struct.h"
-#include "protoshell.h"
+    #include "my.h"
+    #include "proto.h"
+    #include "struct.h"
+
+#endif /* !ALL_H_ */

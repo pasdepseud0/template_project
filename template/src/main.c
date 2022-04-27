@@ -7,8 +7,8 @@
 
 #include "all.h"
 
-int main(__attribute__((unused)) int argc, char **argv)
+int main(__attribute__((unused)) int ac, char **av)
 {
-    // function(argv[1]);
+    // function(av[1]);
     return (0);
 }
